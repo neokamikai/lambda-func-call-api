@@ -10,5 +10,5 @@ exports.helloFromLambdaHandler = async () => {
     // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-logging.html
     console.log(response.status);
 
-    return response.data;
+    return response.data || message;
 };
