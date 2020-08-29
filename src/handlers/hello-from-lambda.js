@@ -5,10 +5,10 @@ const axios = require('axios');
 exports.helloFromLambdaHandler = async () => {
     // If you change this message, you will need to adjust tests in hello-from-lambda.test.js
     const message = 'Hello from Lambda!';
-    const response = await axios.get('http://google.com').catch(error => error);
+    const response = await axios.get('https://google.com').catch(error => error);
     // All log statements are written to CloudWatch by default. For more information, see
     // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-logging.html
-    console.log(message);
+    console.log(response.status);
 
     return response.data;
 };
